@@ -1,24 +1,58 @@
 import logo from './logo.svg';
 import './App.css';
+import './Question.css';
+import { Question } from './Question.js'
+import { useState } from 'react';
 
 function App() {
+  const [question, setAnswer] = useState([
+
+    {
+      sawal: "What is the capital of France?",
+      jawab: "Paris",
+    },
+    {
+      sawal: "What is the capital of Germany?",
+      jawab: "Berlin",
+    },
+    {
+      sawal: "What is the capital of Italy?",
+      jawab: "Rome",
+    },
+    {
+      sawal: "What is the capital of Spain?",
+      jawab: "Madrid",
+    },
+    {
+      sawal: "What is the capital of Portugal?",
+      jawab: "Lisbon",
+    },
+    {
+      sawal: "What is the capital of France?",
+      jawab: "Paris",
+    },
+    {
+      sawal: "What is the capital of Germany?",
+      jawab: "Berlin",
+    },
+    {
+      sawal: "What is the capital of Italy?",
+      jawab: "Rome",
+    },
+    {
+      sawal: "What is the capital of Spain?",
+      jawab: "Madrid",
+    },
+    {
+      sawal: "What is the capital of Portugal?",
+      jawab: "Lisbon",
+    }
+
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Question question={question} setAnswer={setAnswer} />
+    
   );
 }
 
